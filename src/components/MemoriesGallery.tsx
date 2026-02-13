@@ -1,4 +1,11 @@
 import { X } from "lucide-react";
+import collegeMemoryImg from "@/assets/college_memory.jpeg";
+import firstTimeImg from "@/assets/first_time_together.jpeg";
+import lookHowCuteImg from "@/assets/look_how_cute.jpeg";
+import foreverDateImg from "@/assets/my_forever_date.jpeg";
+import princessImg from "@/assets/my_princess.jpeg";
+import facetimeImg from "@/assets/facetime_everywhere.jpeg";
+import unforgettableImg from "@/assets/unforgettable_memory.jpeg";
 
 interface MemoriesGalleryProps {
   isOpen: boolean;
@@ -6,15 +13,13 @@ interface MemoriesGalleryProps {
 }
 
 const memories = [
-  { id: 1, caption: "Our first adventure together 💕", placeholder: "🌸" },
-  { id: 2, caption: "That magical sunset 🌅", placeholder: "🌷" },
-  { id: 3, caption: "Laughing until we cried 😂", placeholder: "🌺" },
-  { id: 4, caption: "Our favorite coffee spot ☕", placeholder: "🌻" },
-  { id: 5, caption: "Dancing in the rain 🌧️", placeholder: "💐" },
-  { id: 6, caption: "Best day ever! ✨", placeholder: "🌹" },
-  { id: 7, caption: "Movie night cuddles 🎬", placeholder: "💮" },
-  { id: 8, caption: "Beach vibes 🏖️", placeholder: "🌼" },
-  { id: 9, caption: "You make me smile 😊", placeholder: "🪷" },
+  { id: 1, image: collegeMemoryImg, caption: "Our College Days 🎓💕" },
+  { id: 2, image: firstTimeImg, caption: "Our First Time Together 💖" },
+  { id: 3, image: lookHowCuteImg, caption: "Look How Adorable We Are 🥰" },
+  { id: 4, image: foreverDateImg, caption: "My Forever Date 💘" },
+  { id: 5, image: princessImg, caption: "My Beautiful Princess 👑✨" },
+  { id: 6, image: facetimeImg, caption: "Our FaceTime Rituals 📱💕" },
+  { id: 7, image: unforgettableImg, caption: "A Memory We'll Never Forget 🫶" },
 ];
 
 const MemoriesGallery = ({ isOpen, onClose }: MemoriesGalleryProps) => {
@@ -45,8 +50,8 @@ const MemoriesGallery = ({ isOpen, onClose }: MemoriesGalleryProps) => {
               className="animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-rose-light to-lavender-light flex items-center justify-center text-4xl md:text-5xl shadow-md hover:shadow-lg transition-shadow cursor-pointer hover:scale-105 transform duration-300">
-                {memory.placeholder}
+              <div className="aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow cursor-pointer hover:scale-105 transform duration-300">
+                <img src={memory.image} alt={memory.caption} className="w-full h-full object-cover" />
               </div>
               <p className="text-center text-sm text-muted-foreground mt-2 font-medium">
                 {memory.caption}
@@ -56,7 +61,7 @@ const MemoriesGallery = ({ isOpen, onClose }: MemoriesGalleryProps) => {
         </div>
         
         <p className="text-center text-muted-foreground text-sm mt-6 italic">
-          Replace placeholders with your actual photos! 📸
+          Every moment with you is a treasure 💝
         </p>
       </div>
     </div>
