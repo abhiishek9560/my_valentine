@@ -1,4 +1,8 @@
 import { X } from "lucide-react";
+import cuteImg from "@/assets/cute.jpeg";
+import foreverImg from "@/assets/forever.jpeg";
+import kissImg from "@/assets/k.jpeg";
+import sillyImg from "@/assets/silly.jpeg";
 
 interface PhotoBoothStripProps {
   isOpen: boolean;
@@ -6,10 +10,10 @@ interface PhotoBoothStripProps {
 }
 
 const photos = [
-  { id: 1, emoji: "🥰", caption: "Us being cute" },
-  { id: 2, emoji: "😘", caption: "Stolen kisses" },
-  { id: 3, emoji: "🤪", caption: "Being silly" },
-  { id: 4, emoji: "💑", caption: "Forever & always" },
+  { id: 1, image: cuteImg, caption: "Us being cute" },
+  { id: 2, image: foreverImg, caption: "Forever & always" },
+  { id: 3, image: kissImg, caption: "Stolen kisses" },
+  { id: 4, image: sillyImg, caption: "Being silly" },
 ];
 
 const PhotoBoothStrip = ({ isOpen, onClose }: PhotoBoothStripProps) => {
@@ -36,8 +40,8 @@ const PhotoBoothStrip = ({ isOpen, onClose }: PhotoBoothStripProps) => {
                 className="animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <div className="aspect-[4/3] bg-gradient-to-br from-rose-light via-lavender-light to-cream rounded-sm flex items-center justify-center text-5xl border-4 border-white shadow-sm">
-                  {photo.emoji}
+                <div className="aspect-[4/3] rounded-sm overflow-hidden border-4 border-white shadow-sm">
+                  <img src={photo.image} alt={photo.caption} className="w-full h-full object-cover" />
                 </div>
                 <p className="text-center text-xs text-muted-foreground font-medium py-1 font-romantic">
                   {photo.caption}
