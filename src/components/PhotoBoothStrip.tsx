@@ -52,7 +52,7 @@ const PhotoBoothStrip = ({ isOpen, onClose }: PhotoBoothStripProps) => {
           
           <div className="mt-3 pt-2 border-t border-rose-light">
             <p className="text-center font-romantic text-rose text-sm">
-              Valentine's Day 2025
+              Valentine's Day 2026
             </p>
             <p className="text-center text-xs text-muted-foreground mt-1">
               💕 Made with love 💕
