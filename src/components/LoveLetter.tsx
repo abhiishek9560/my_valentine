@@ -32,18 +32,28 @@ const LoveLetter = ({ isOpen, onClose }: LoveLetterProps) => {
           style={{ animationDelay: "0.2s" }}
         >
           <div className="handwritten text-foreground text-lg leading-relaxed space-y-4">
-            <p>
-              From the moment I met you, my world became brighter and more colorful than I ever imagined possible.
-            </p>
-            <p>
-              Every laugh we share, every quiet moment together, every adventure big or small — they're all treasures I hold close to my heart.
-            </p>
-            <p>
-              You are my favorite person, my best friend, and the love of my life.
-            </p>
-            <p>
-              Will you be my Valentine? 💕
-            </p>
+            <h1>To My Beautiful Ankita 💕</h1>
+
+                <p>
+                    From the moment I met you, Ankita, my world became brighter and more colorful than I ever imagined possible.
+                </p>
+            
+                <p>
+                    Every laugh we share, every quiet moment together, every adventure — big or small — they're all treasures I hold close to my heart.
+                </p>
+            
+                <p>
+                    You are my favorite person, my best friend, and the love of my life. 
+                    My sweet boo boo, you make everything feel magical just by being you.
+                </p>
+            
+                <p>
+                    I am so grateful to call you mine, boo boo. You are my happiness, my peace, and my forever.
+                </p>
+            
+                <p>
+                    Will you be my Valentine? 💖
+                </p>
           </div>
           
           <div className="mt-6 pt-4 border-t border-rose-light">
@@ -56,9 +66,6 @@ const LoveLetter = ({ isOpen, onClose }: LoveLetterProps) => {
           </div>
         </div>
         
-        <p className="text-center text-muted-foreground text-sm mt-6 italic">
-          Customize this message with your own words! 💌
-        </p>
       </div>
     </div>
   );
