@@ -50,8 +50,8 @@ const MemoriesGallery = ({ isOpen, onClose }: MemoriesGalleryProps) => {
               className="animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow cursor-pointer hover:scale-105 transform duration-300">
-                <img src={memory.image} alt={memory.caption} className="w-full h-full object-cover" />
+              <div className="aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow cursor-pointer hover:scale-105 transform duration-300 mx-auto">
+                <img src={memory.image} alt={memory.caption} className="w-full h-full object-fit" />
               </div>
               <p className="text-center text-sm text-muted-foreground mt-2 font-medium">
                 {memory.caption}
